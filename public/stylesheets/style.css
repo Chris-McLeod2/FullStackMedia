@@ -1,6 +1,13 @@
 * {
     box-sizing: border-box;
 }
+
+:root {
+    --maincolor:black;
+    --secondary:rgb(139, 212, 139);
+    --tertiary:white;
+}
+ 
   
 body, html {
     height: 100%;
