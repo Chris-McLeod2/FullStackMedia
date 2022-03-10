@@ -2,7 +2,7 @@ const p5 = require('node-p5');
 
 function sketch(p) {
     p.setup = () => {
-        let canvas = p.createCanvas(200, 200);
+        let canvas = p.createCanvas(1920, 1080);
         setTimeout(() => {
             p.saveCanvas(canvas, 'myCanvas', 'png').then(filename => {
                 console.log(`saved the canvas as ${filename}`);
