@@ -1,10 +1,12 @@
-<section class="profile-card">
+{{!-- <section class="profile-card">
     <div class="user-about">
         <h1>About</h1>
-        {{user.about}}
-        <div contenteditable="true">
+        {{profile.bio}}
+        <div contenteditable="true" id="bio">
             Bio
         </div>
+        <button id="editBio">Edit</button>
+        
 
           <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,10 +35,10 @@
             <label for="languages">Choose:</label>
 
             <select name="languages" id="languages">
-                <option value="volvo">JavaScript</option>
-                <option value="saab">HTML</option>
-                <option value="mercedes">CSS</option>
-                <option value="audi">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="python">Python</option>
             </select>
 
         </div>
@@ -49,10 +51,10 @@
 
 
             <select name="languages" id="languages">
-                <option value="volvo">JavaScript</option>
-                <option value="saab">HTML</option>
-                <option value="mercedes">CSS</option>
-                <option value="audi">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="python">Python</option>
             </select>
 
 
@@ -64,6 +66,40 @@
         </div>
 
     </div>
+</section> --}}
+
+
+<section class="profile-card">
+<div>
+ <form class="bio-form">
+      <h3>Profile Info</h3>
+    <div>
+      <label for="bio-info">Bio:</label>
+      <input type="text" id="bio-info" />
+    </div>
+    <div>
+      <label for="name-info">Name:</label>
+      <input type="text" id="name-info" />
+    </div>
+    <div>
+      <label for="title-info">Title:</label>
+      <input type="text" id="title-info" />
+    </div>
+    <div>
+      <label for="main-info">Main Languages:</label>
+      <input type="text" id="main-info" />
+    </div>
+    <div>
+      <label for="to-learn-info">To Learn Languages:</label>
+      <input type="text" id="to-learn-info" />
+    </div>
+    <div>
+      <button type="submit">Add Info</button>
+    </div>
+  </form>
+</div>
 </section>
 
-<script src="./"></script>
+
+
+<script src="/javascript/profile.js"></script>
