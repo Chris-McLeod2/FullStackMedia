@@ -49,13 +49,11 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_url: {
+    content: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isURL: true
-      }
-    },
+      validate: {len: [1]}
+      },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

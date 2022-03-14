@@ -183,3 +183,11 @@ footer {
     padding: 1%;
     font-size: 110%;
 }
+
+.post-card {
+    border: 3px solid black;
+}
+.comment-card {
+    border: 1px solid black;
+    align-content: right;
+}

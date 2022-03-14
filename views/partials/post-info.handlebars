@@ -1,0 +1,19 @@
+ <div class="post-card">
+  <div class="container">
+            <h4><b>{{title}} by {{user.username}}</b></h4>
+            <p>{{content}}</p>
+            <section>add comments</section>
+
+    <form class="comment-form{{id}}">
+        <div>
+            <label for="coment">comment</label>
+            <input type="text" class="comment_text{{id}}" />
+            <input type="hidden" value = {{id}} class ="post_id{{id}}">
+        </div>
+      
+        <div>
+             <button type="submit">ADD COMMENT</button>
+        </div>
+    </form>
+</div>
+
