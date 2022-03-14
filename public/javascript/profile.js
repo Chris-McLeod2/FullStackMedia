@@ -8,14 +8,14 @@ function bioFormHandler(event) {
     const tolearn = document.querySelector('#to-learn-info').value.trim();
 
     if (bio && name && title && main && tolearn) {
-        fetch('/api/users', {
+        fetch('/api/profile', {
             method: 'post',
             body: JSON.stringify({
                 bio,
                 name,
                 title,
-                main,
-                tolearn
+                main_languages,
+                to_learn
             }),
             headers: { 'Content-Type': 'application/json' }
         }).then((response) => {console.log(response)})
