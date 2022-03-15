@@ -15,6 +15,15 @@ router.get('/', (req, res) => {
     res.render('login');
   });
 
+  router.get('/show-profile', (req, res) => {
+    if (req.session.loggedIn == false) {
+      res.redirect('/');
+      return;
+    }
+
+    res.render('show-profile');
+  });
+
   router.get('/posts', (req, res) => {
 
     res.render('posts');

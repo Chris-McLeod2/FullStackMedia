@@ -58,12 +58,12 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
-// Profile.belongsTo(User, {
-//   foreignKey: 'user_id'
-// });
+Profile.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
-// User.hasOne(Profile, {
-//   foreignKey: 'profile_id'
-// });
+User.hasOne(Profile, {
+  foreignKey: 'profile_id'
+});
 
 module.exports = { User, Post, Vote, Comment, Profile };
