@@ -43,7 +43,7 @@ router.get('/', (req, res) => {
 
   router.get('/profile', (req, res) => {
     if (req.session.loggedIn) {
-      res.render('profile');
+      res.render('edit-profile');
       }
       else {
         res.redirect('login')
