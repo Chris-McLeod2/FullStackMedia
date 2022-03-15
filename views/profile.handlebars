@@ -1,33 +1,42 @@
-
 <section class="profile-card">
-<div>
- <form class="bio-form">
+  <div>
+    <form id="bio-form">
       <h3>Edit Profile Info</h3>
-    <div>
-      <label for="bio-info">Bio:</label>
-      <input type="text" id="bio-info" />
-    </div>
-    <div>
-      <label for="name-info">Name:</label>
-      <input type="text" id="name-info" />
-    </div>
-    <div>
-      <label for="title-info">Title:</label>
-      <input type="text" id="title-info" />
-    </div>
-    <div>
-      <label for="main-info">Main Languages:</label>
-      <input type="text" id="main-info" />
-    </div>
-    <div>
-      <label for="to-learn-info">To Learn Languages:</label>
-      <input type="text" id="to-learn-info" />
-    </div>
-    <div>
-      <button type="submit">Add Info</button>
-    </div>
-  </form>
-</div>
+      <div>
+        <label for="bio-info">Bio:</label>
+        <input type="text" id="bio-info" />
+      </div>
+      <div>
+        <label for="name-info">Name:</label>
+        <input type="text" id="name-info" />
+      </div>
+      <div>
+        <label for="title-info">Title:</label>
+        <input type="text" id="title-info" />
+      </div>
+      <div>
+        <label for="main-info">Main Languages:</label>
+        <input type="text" id="main-info" />
+      </div>
+      <div>
+        <label for="to-learn-info">To Learn Languages:</label>
+        <input type="text" id="to-learn-info" />
+      </div>
+      <div>
+        <button type="submit">Add Info</button>
+      </div>
+
+      <div>
+          <h1>{{profile.name}}</h1>
+          <h2>{{profile.title}}</h2>
+          <h2>{{profile.bio}}</h2>
+          <h2>{{profile.main_languages}}</h2>
+          <h2>{{profile.to_learn}}</h2>
+          <h1>{{body}}</h1>
+        </div>
+
+    </form>
+  </div>
 </section>
 
 <script src="/javascript/profile.js"></script>
@@ -36,71 +45,70 @@
 
 
 {{!-- <section class="profile-card">
-    <div class="user-about">
-        <h1>About</h1>
-        {{profile.bio}}
-        <div contenteditable="true" id="bio">
-            Bio
-        </div>
-        <button id="editBio">Edit</button>
-        
+  <div class="user-about">
+    <h1>About</h1>
+    {{profile.bio}}
+    <div contenteditable="true" id="bio">
+      Bio
+    </div>
+    <button id="editBio">Edit</button>
 
-          <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <div contenteditable="true" class="card">
-            <img src="" alt="" style="width:100%">
-            <h1>Name</h1>
-            <p class="title">Title</p>
-            <p>School</p>
-            <a href="#"><i class="fa fa-dribbble"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <p><button>Contact</button></p>
-        </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div contenteditable="true" class="card">
+      <img src="" alt="" style="width:100%">
+      <h1>Name</h1>
+      <p class="title">Title</p>
+      <p>School</p>
+      <a href="#"><i class="fa fa-dribbble"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <p><button>Contact</button></p>
+    </div>
+
+  </div>
+
+  <div class="user-details">
+
+    <div class="main-languages">
+      <h2>Main Languages</h2>
+      {{user.mainLanguages}}
+
+
+      <label for="languages">Choose:</label>
+
+      <select name="languages" id="languages">
+        <option value="javascript">JavaScript</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="python">Python</option>
+      </select>
 
     </div>
 
-    <div class="user-details">
+    <div class="to-learn-languages">
+      <h2>To Learn Languages</h2>
+      {{user.learning}}
 
-        <div class="main-languages">
-            <h2>Main Languages</h2>
-            {{user.mainLanguages}}
-
-
-            <label for="languages">Choose:</label>
-
-            <select name="languages" id="languages">
-                <option value="javascript">JavaScript</option>
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="python">Python</option>
-            </select>
-
-        </div>
-
-        <div class="to-learn-languages">
-            <h2>To Learn Languages</h2>
-            {{user.learning}}
-
-             <label for="languages">Choose:</label>
+      <label for="languages">Choose:</label>
 
 
-            <select name="languages" id="languages">
-                <option value="javascript">JavaScript</option>
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="python">Python</option>
-            </select>
+      <select name="languages" id="languages">
+        <option value="javascript">JavaScript</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="python">Python</option>
+      </select>
 
-
-        </div>
-
-        <div class="reports">
-            {{user.reports}}
-            <h2>Reports</h2>
-        </div>
 
     </div>
+
+    <div class="reports">
+      {{user.reports}}
+      <h2>Reports</h2>
+    </div>
+
+  </div>
 </section> --}}

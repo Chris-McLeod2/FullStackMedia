@@ -9,7 +9,7 @@ function bioFormHandler(event) {
 
     if (bio && name && title && main_languages && to_learn) {
         fetch('/api/profile', {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify({
                 bio,
                 name,
@@ -18,9 +18,10 @@ function bioFormHandler(event) {
                 to_learn
             }),
             headers: { 'Content-Type': 'application/json' }
-        }).then((response) => {console.log(response)})
+        
+        }).then(response => response.json()).then(res =>  document.location.replace(`/show-profile/${res.id}`));
     }
 }
 
-document.querySelector('.bio-form').addEventListener('submit', bioFormHandler);
+document.querySelector('#bio-form').addEventListener('submit', bioFormHandler);
 
