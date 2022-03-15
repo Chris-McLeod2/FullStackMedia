@@ -27,10 +27,12 @@ class Profile extends Model {}
         main_languages: {
             type: DataTypes.STRING,
             allowNull: false
+          // defaultValue: "JS"
         },
         to_learn: {
             type: DataTypes.STRING,
             allowNull: false
+          // defaultValue: "JS"
         },
         user_id: {
             type: DataTypes.INTEGER,
