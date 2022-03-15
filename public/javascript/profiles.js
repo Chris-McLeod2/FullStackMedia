@@ -7,7 +7,7 @@ fetch(`/api/profile/`).then(res=>res.json()).then(data=>{
      let user = data[i];
 
      document.querySelector('.profile-cards').innerHTML +=
-         `<div>
+         `<div class="profile-card">
              <h1>${user.name}</h1>
              <h2>${user.title}</h2>
              <h2>${user.bio}</h2>
