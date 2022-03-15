@@ -2,18 +2,36 @@
   <div class="container">
             <h4><b>{{title}} by {{user.username}}</b></h4>
             <p>{{content}}</p>
-            <section>add comments</section>
+           
 
-    <form class="comment-form{{id}}">
+
+
+
+
+      <div class="form-section">
+            <form class="comment-form">
+                <div class="comment-title-section">
+                    <label for="comment">comment</label>
+                    <input type="text" id="comment_text" name="comment_text" />
+                </div>
+                <div class="post_id">
+                   <input type="hidden" id="post_id">
+                </div>
+                <button type="submit" class="btn" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+    {{!-- <form class="comment-form">
         <div>
             <label for="coment">comment</label>
-            <input type="text" class="comment_text{{id}}" />
-            <input type="hidden" value = {{id}} class ="post_id{{id}}">
+            <input type="text" id="comment_text" />
+            <input type="hidden" id="post_id">
         </div>
       
         <div>
-             <button type="submit">ADD COMMENT</button>
+             <button type="submit" class="btn" id="submit">Add Comment</button>
         </div>
     </form>
-</div>
+</div> --}}
 

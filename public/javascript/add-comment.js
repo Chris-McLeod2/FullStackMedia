@@ -1,33 +1,28 @@
 function commentFormHandler(event) {
     event.preventDefault();
+  console.log('hit')
 
-    if (event.target.className.includes('comment-form')) {
-
-        
-        console.log(event.target)
-    }
-  
-
-    // const comment_text = document.querySelector('.comment_text').value.trim();
-    // const post_id = document.querySelector('.post_id').value.trim();
+    const comment_text = document.querySelector('#comment_text').value.trim();
+    const post_id = document.querySelector('#post_id').value.trim();
     
-    // console.log(comment_text , post_id)
+    console.log(comment_text , post_id)
 
-    // if (title && content) {
-    //   fetch('/api/posts', {
-    //     method: 'post',
-    //     body: JSON.stringify({
-    //       title,
-    //       content
-    //     }),
-    //     headers: { 'Content-Type': 'application/json' }
-    //   }).then(() => window.location.pathname = '/posts')
-    //   .catch(err => {
-    //     console.log('error');
-    //   });
-    // }
+    if (comment_text && post_id) {
+      fetch('/api/comments', {
+        method: 'post',
+        body: JSON.stringify({
+          comment_text,
+          post_id,
+          user_id
+        }),
+        headers: { 'Content-Type': 'application/json' }
+      }).then(() => window.location.pathname = '/comments')
+      .catch(err => {
+        console.log('error');
+      });
+    }
    }
 
  
-  document.addEventListener('submit', commentFormHandler);
+  document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
 //   document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
