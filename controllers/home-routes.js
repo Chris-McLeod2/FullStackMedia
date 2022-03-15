@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { render } = require('express/lib/response');
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
@@ -21,8 +22,19 @@ router.get('/', (req, res) => {
       return;
     }
 
-    res.render('show-profile');
+    res.render('profiles');
   });
+
+  router.get('/show-profile/:id', (req, res) => {
+    if (req.session.loggedIn == false) {
+      res.redirect('/');
+      return;
+    }
+
+    res.render('show-profile');
+  })
+
+
 
   router.get('/posts', (req, res) => {
 
