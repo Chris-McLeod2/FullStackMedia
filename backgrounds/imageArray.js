@@ -1,10 +1,16 @@
-var imgArray = new Array();
+var images = ['./images/redGrave', './images/cityScape', './images/sunScene'];
 
-imgArray[0] = new Image();
-imgArray[0].src = './backgrounds/images/redGrave.jpg';
+var index = 0;
 
-imgArray[1] = new Image();
-imgArray[1].src = './backgrounds/images/cityScape.jpg';
+function makeImage() {
+    var img = document.createElement('img')
+    img.src = images[index];
+    document.getElementById('content').appendChild(img);
+}
 
-imgArray[2] = new Image();
-imgArray[2].src = './backgrounds/images/sunScene.jpg';
+function nextImage() {
+    var img = document.getElementById('content').getElementsByTagName('img')[0]
+    index++;
+    index = index % images.length;
+    img.src = images[index];
+}

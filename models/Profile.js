@@ -32,6 +32,10 @@ Profile.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    /*background: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },*/
     user_id: {
       type: DataTypes.INTEGER,
       references: {

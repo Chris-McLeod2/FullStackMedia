@@ -291,7 +291,18 @@ main {
     background-color:var(--secondary);
     border-radius:5px;
     padding:10px;
+    /*background-image: ;*/
+
 }
+
+.profile-card h1 h2 {
+    color: white;
+}
+
+.profile-card body {
+    background-image: url("../../backgrounds/images/cityScape.png");
+}
+
 
 /*end of profile css*/
   
