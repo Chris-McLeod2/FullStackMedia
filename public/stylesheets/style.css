@@ -17,9 +17,9 @@ header ul {
     left:75%;
 }
 
-/*body {
-    background-image: url('/backgrounds/cityScape.png');
-}*/
+body {
+    background-image: url('../backgrounds/cityScape.png');
+}
   
 body, html {
     height: 100%;
