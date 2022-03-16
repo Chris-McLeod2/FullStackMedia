@@ -8,6 +8,7 @@
     --tertiary:rgb(209, 209, 209);
 }
 
+
 header ul {
     width:100%;
 }
@@ -15,13 +16,17 @@ header ul {
 .rightOriented {
     left:75%;
 }
+
+body {
+    background-image: url('./backgrounds/cityScape.png');
+}
   
 body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    background-color: var(--maincolor);
+
 }
 
   
