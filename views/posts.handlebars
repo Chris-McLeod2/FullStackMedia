@@ -1,17 +1,15 @@
-<section class="post-container">
-    <div class="post-frame">
-        <div class="post-author">
-            <a href="{{user.profile}}">{{userName}}</a>
-            <img src="/images/{{user.avatar}}" alt="{{user}}avatar">
-        </div>
-        <div class="post-content">
-            {{postContent}}
-        </div>
-        <div class="post-interact">
-            <a>Comment</a>
-            <a>Share</a>
-        </div>
+<div class="post-frame">
+    <div class="post-author">
+        <a href="{{user.profile}}">{{userName}}</a>
+        <img src="/images/{{user.avatar}}" alt="{{user}}avatar">
     </div>
-</section>
+    <div class="post-content">
+        {{postContent}}
+    </div>
+    <div class="post-interact">
+        <a>Comment</a>
+        <a>Share</a>
+    </div>
+</div>
 
 <script src="/models/Post.js"></script>
