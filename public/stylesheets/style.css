@@ -282,17 +282,30 @@ main {
     background-color:var(--tertiary);
     border:2px solid black;
     width: 70%;
-    align-self:center;
     border-radius:5px;
     min-height:60px;
     padding:5px;
+    align-self: center;
 }
 
 
 /*end of posts css*/
 /*start of profile css*/
+.profile-card2 {
+    background-color:var(--tertiary);
+    border:2px solid black;
+    width: 70%;
+    align-self:center;
+    border-radius:5px;
+    min-height:60px;
+    margin: 20px;
+    padding:5px;
+    align-self: center;
+}
 
 .profile-card {
+    display:flex;
+    flex-direction:column;
     background-color:var(--secondary);
     border-radius:5px;
     padding:10px;
