@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { render } = require('express/lib/response');
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const auth = require('../util/auth.js')
@@ -15,6 +16,26 @@ router.get('/', (req, res) => {
 
     res.render('login');
   });
+
+  router.get('/show-profile', (req, res) => {
+    if (req.session.loggedIn == false) {
+      res.redirect('/');
+      return;
+    }
+
+    res.render('profiles');
+  });
+
+  router.get('/show-profile/:id', (req, res) => {
+    if (req.session.loggedIn == false) {
+      res.redirect('/');
+      return;
+    }
+
+    res.render('show-profile');
+  })
+
+
 
   router.get('/posts', (req, res) => {
     Post.findAll({
@@ -46,7 +67,7 @@ router.get('/', (req, res) => {
 
   router.get('/profile', (req, res) => {
     if (req.session.loggedIn) {
-      res.render('profile');
+      res.render('edit-profile');
       }
       else {
         res.redirect('login')
