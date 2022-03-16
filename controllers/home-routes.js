@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { render } = require('express/lib/response');
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
+const auth = require('../util/auth.js')
 
 router.get('/', (req, res) => {
     res.render('homepage');
@@ -37,8 +38,31 @@ router.get('/', (req, res) => {
 
 
   router.get('/posts', (req, res) => {
+    Post.findAll({
+      include: [
+        {
+          model: Comment,
+          attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbPostData => {
+        const posts = dbPostData.map(post => post.get({ plain: true }));
 
-    res.render('posts');
+          res.render('posts', {posts})
+        }) 
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
   });
 
   router.get('/profile', (req, res) => {
@@ -61,6 +85,11 @@ router.get('/', (req, res) => {
     else {
       res.status(404).end();
     }
+  });
+
+  router.get('/add-post', auth, (req, res) => {
+
+    res.render('add-post');
   });
 
 module.exports = router;

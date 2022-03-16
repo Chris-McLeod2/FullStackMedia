@@ -1,15 +1,39 @@
 <div class="post-frame">
     <div class="post-author">
         <a href="{{user.profile}}">{{userName}}</a>
-        <img src="/images/{{user.avatar}}" alt="{{user}}avatar">
+        
+        {{!-- <img src="/images/{{user.avatar}}" alt="{{user}}avater"> --}}
+
     </div>
-    <div class="post-content">
+    {{!-- <div class="post-content">
         {{postContent}}
-    </div>
+    </div> --}}
     <div class="post-interact">
         <a>Comment</a>
-        <a>Share</a>
+       <a href="/add-post">Create Post</a>
     </div>
+
+    {{#each posts as |post|}}
+   {{> post-info post}}
+    {{/each}}
+    {{!-- <div class="post-card">
+  <div class="container">
+    <h4><b>post-title by username</b></h4>
+    <p>content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit optio quis earum saepe blanditiis, deserunt fugiat, adipisci ullam, praesentium culpa amet? Enim cum similique, quas natus eius quaerat at porro.</p>
+  </div>
+  <div class="comment-card">
+    <p>comment info is here by Username</p>
+    </div>
+      <div class="comment-card">
+    <p>comment info is here by Username</p>
+    </div>  
+    <div class="comment-card">
+    <p>comment info is here by Username</p>
+    </div>
+</div> --}}
+
+
 </div>
 
-<script src="/models/Post.js"></script>
+
+{{!-- <script src="/models/Post.js"></script> --}}
