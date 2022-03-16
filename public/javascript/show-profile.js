@@ -4,7 +4,7 @@ let id = loc[loc.length-1];
 fetch(`/api/profile/${id}`).then(res=>res.json()).then(data=>{
 
 document.querySelector('.profile-card').innerHTML +=
-    `<div>
+    `<div class="profile-card">
         <h1>Username:</h1>
         <h2>${data.name}</h2>
         <h1>Title:</h1>
