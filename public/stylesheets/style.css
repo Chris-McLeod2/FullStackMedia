@@ -289,6 +289,8 @@ main {
     background-color:var(--secondary);
     border-radius:5px;
     padding:10px;
+    box-shadow: inset 2ch 1ch 0.5ch hsla(0, 0%, 47%, 0.295),
+    inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
 }
 
 /*end of profile css*/
