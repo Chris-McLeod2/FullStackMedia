@@ -133,7 +133,7 @@ main {
 }
   
 .post {
-    margin-bottom: 2%;
+    margin-bottom: 10px;
     line-height: 150%;
 }
   
@@ -251,38 +251,31 @@ main {
 /*end of login css*/
 /*start of posts css*/
 
-.post-frame {
+.post-card {
     background-color:var(--secondary);
+    margin: 10px;
     border-radius:5px;
     height:120px;
     display:flex;
     flex-direction:column;
     padding:10px;
-    width:70%;
-    align-self:center; /*NEEDS CENTERING*/
+    width:40%;
     box-shadow: inset 2ch 1ch 0.5ch hsla(0, 0%, 47%, 0.295),
     inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
 }
 
-.post-author {
-    align-self:flex-end;
-    padding-bottom:5px;
-}
 
-.post-content {
+
+.post-container {
     background-color:var(--tertiary);
     border:2px solid black;
-    width:80%;
+    width: 70%;
     align-self:center;
     border-radius:5px;
     min-height:60px;
     padding:5px;
 }
 
-.post-interact {
-    align-self:center;
-    justify-content:space-around;
-}
 
 /*end of posts css*/
 /*start of profile css*/
@@ -303,9 +296,15 @@ footer {
     font-size: 110%;
 }
 
-.post-card {
-    border: 3px solid black;
-}
+/* .post-content {
+    background-color:var(--tertiary);
+    border:2px solid black;
+    width:80%;
+    align-self:center;
+    border-radius:5px;
+    min-height:60px;
+    padding:5px;
+} */
 .comment-card {
     border: 1px solid black;
     align-content: right;
