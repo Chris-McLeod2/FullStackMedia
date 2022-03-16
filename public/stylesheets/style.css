@@ -17,9 +17,10 @@ header ul {
     left:75%;
 }
 
-body {
+
+ body {
     background-image: url('../backgrounds/cityScape.png');
-}
+} 
   
 body, html {
     height: 100%;
@@ -29,7 +30,10 @@ body, html {
 
 }
 
-  
+input {
+    width: 50%;
+  }
+
 a {
     text-decoration: none;
     color: #225ca3;
