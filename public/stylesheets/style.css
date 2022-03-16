@@ -8,6 +8,9 @@
     --tertiary:rgb(209, 209, 209);
 }
 
+body {
+    background-image: url('../../backgrounds/cityScape.png');
+}
 
 header ul {
     width:100%;
