@@ -4,36 +4,34 @@
 
 :root {
     --maincolor:rgb(31, 31, 31);
-    --secondary:rgb(29, 161, 29);
-    --tertiary:rgb(192,192, 192);
-}
-
-
-header ul {
-    width:100%;
+    --secondary:rgb(75, 200, 75);
+    --tertiary:rgb(209, 209, 209);
 }
 
 .rightOriented {
-    left:75%;
+    text-align:right;
 }
 
+.banner {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
 
- body {
-    background-image: url('../backgrounds/cityScape.png');
-} 
+.banner-container {
+    padding: 1em;
+}
   
 body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-
+    background-color: var(--maincolor);
 }
 
-input {
-    width: 50%;
-  }
-
+  
 a {
     text-decoration: none;
     color: #225ca3;
@@ -55,10 +53,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-
-.post-interact a{
-    color: gray;
-}
+  
 button:hover {
     background-color: #3486eb;
 }
@@ -79,9 +74,8 @@ textarea:focus, input:focus {
     border: 1px solid #3486eb;
 }
   
-textarea {
-    min-width: 40%;
-    min-height: 100px;
+input {
+    width:auto;
 }
   
 form > div {
@@ -104,14 +98,9 @@ header {
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 1%;
     background-color:var(--tertiary);
 }
-  
-header h1 {
-    font-size: 1em;
-}
+
   
 main {
     flex: 1;
@@ -145,7 +134,7 @@ main {
 }
   
 .post {
-    margin-bottom: 10px;
+    margin-bottom: 2%;
     line-height: 150%;
 }
   
@@ -225,6 +214,7 @@ main {
     align-self:center;
     box-shadow: inset 2ch 1ch 0.5ch hsla(0, 0%, 47%, 0.295),
     inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
+    padding:5px;
 }
 
 .about .about-contents {
@@ -233,11 +223,19 @@ main {
     inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
 }
 
+.about .about-contents p {
+    text-indent: 2em;
+    text-align:left;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
 /*end of homepage css */
 /*start of login css*/
 
 .main-card-2 {
     display:flex;
+    flex-wrap:wrap;
     padding:70px;
     justify-content:space-between;
 }
@@ -263,78 +261,30 @@ main {
 /*end of login css*/
 /*start of posts css*/
 
-.post-card {
+.post-container {
+    display:flex;
+    justify-content:center;
+}
+
+.post-frame {
     background-color:var(--secondary);
-    margin: 10px;
     border-radius:5px;
     height:120px;
     display:flex;
     flex-direction:column;
     padding:10px;
-    width:40%;
+    width:70%;
+    align-self:center;
     box-shadow: inset 2ch 1ch 0.5ch hsla(0, 0%, 47%, 0.295),
     inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
 }
 
-
-
-.post-container {
-    background-color:var(--tertiary);
-    border:2px solid black;
-    width: 70%;
-    border-radius:5px;
-    min-height:60px;
-    padding:5px;
-    align-self: center;
+.post-author {
+    align-self:flex-end;
+    padding-bottom:5px;
 }
 
-
-/*end of posts css*/
-/*start of profile css*/
-.profile-card2 {
-    background-color:var(--tertiary);
-    border:2px solid black;
-    width: 70%;
-    align-self:center;
-    border-radius:5px;
-    min-height:60px;
-    margin: 20px;
-    padding:5px;
-    align-self: center;
-}
-
-.profile-card {
-    display:flex;
-    flex-direction:column;
-    background-color:var(--secondary);
-    border-radius:5px;
-    padding:10px;
-    box-shadow: inset 2ch 1ch 0.5ch hsla(0, 0%, 47%, 0.295),
-    inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
-}
-
-.profile-card2 {
-    background-color:var(--tertiary);
-    border:2px solid black;
-    width: 70%;
-    align-self:center;
-    border-radius:5px;
-    min-height:60px;
-    padding:5px;
-    margin: 20px;
-}
-
-/*end of profile css*/
-  
-footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
-}
-
-/* .post-content {
+.post-content {
     background-color:var(--tertiary);
     border:2px solid black;
     width:80%;
@@ -342,9 +292,130 @@ footer {
     border-radius:5px;
     min-height:60px;
     padding:5px;
-} */
+}
+
+.post-interact {
+    align-self:center;
+    justify-content:space-around;
+}
+
+/*end of posts css*/
+/*start of profile css*/
+.profile-cardz {
+    background-color:var(--secondary);
+    border-radius:5px;
+    text-align:center;
+}
+
+.profile-card {
+    background-color:var(--secondary);
+    border-radius:5px;
+    padding:10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    position:inherit;
+    box-shadow: inset 2ch 1ch 0.5ch hsla(0, 0%, 47%, 0.295),
+    inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
+}
+.profile-card h1 {
+    width:100%;
+    text-align:center;
+}
+
+/*end of profile css*/
+/*start of edit-profile css*/
+.bio {
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+    display:flex;
+    flex-wrap:wrap;
+    box-shadow: inset 2ch 1ch 0.5ch hsla(0, 0%, 47%, 0.295),
+    inset -2ch -1ch 0.5ch hsla(0, 0%, 47%, 0.295);
+}
+
+.bio h3 {
+    flex-basis:100%;
+    text-align:center;
+}
+
+.bio-left {
+    position:absolute;
+    padding-top:59px;
+}
+
+.bio-right {
+    width:100%;
+    flex-direction:column;
+    flex-wrap:wrap;
+    text-align:end;
+}
+
+.bio-center {
+    text-align:center;
+    flex-basis:100%;
+}
+
+.bio-info {
+    height:215px;
+    width:185px;
+    overflow:scroll;
+}
+
+/*end of edit-profile css*/
+/*start of comment css*/
 .comment-card {
     border: 1px solid black;
     align-content: right;
 }
+/*end of comment css*/
+  
+footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+    background-color: var(--tertiary);
+}
 
+
+@media (max-device-width: 799px) {
+    /*start of homepage mediaquery*/
+    .main-card {
+        flex-direction: column;
+        justify-content:center;
+    }
+    .about, .login, .signup {
+        width:100%;
+        margin-top: 20px;
+    }
+    /*end of homepage mediaquery*/
+    /*start of edit-profile mediaquery */
+    .bio-info {
+        height:75px;
+        width:auto;
+    }
+    .bio-left {
+        position:inherit;
+        flex-basis:100%;
+        text-align:center;
+        padding-top:0px;
+    }
+    .bio-right {
+        text-align:center;
+    }
+    /*end of edit-profile mediaquery*/
+    /*start of login mediaquery*/
+    .main-card-2 {
+        justify-content:center;
+    }
+    .login-form, .signup-form {
+        width:100%;
+        margin-top:15px;
+    }
+    /*end of login mediaquery*/
+
+}
